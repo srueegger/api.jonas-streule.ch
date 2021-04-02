@@ -57,3 +57,4 @@ wp-content/languages/
 *.txt
 *.html
 !wp-content/themes/jonas-streule-api/*
+.htaccess
