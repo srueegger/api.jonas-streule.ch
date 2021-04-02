@@ -53,6 +53,7 @@ wp-admin/*
 wp-includes/*
 wp-content/plugins/
 wp-content/languages/
+wp-content/uploads/
 *.php
 *.txt
 *.html
