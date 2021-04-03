@@ -34,6 +34,11 @@
                 "class": "",
                 "id": ""
             },
+            "admin_column_enabled": 1,
+            "admin_column_post_types": [
+                "js_bingo_statements"
+            ],
+            "admin_column_taxonomies": "",
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -60,5 +65,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617366424
+    "modified": 1617435331
 }
