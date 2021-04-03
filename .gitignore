@@ -51,11 +51,13 @@ Thumbs.db
 # WordPress Files
 wp-admin/*
 wp-includes/*
-wp-content/plugins/
+wp-content/plugins/advanced-custom-fields-pro/
+wp-content/plugins/backupbuddy/
 wp-content/languages/
 wp-content/uploads/
 *.php
 *.txt
 *.html
 !wp-content/themes/jonas-streule-api/*
+!wp-content/plugins/js-cpt-tax/*
 .htaccess
