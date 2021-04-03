@@ -96,3 +96,10 @@ add_action( 'admin_menu', 'remove_menu_items', 999 );
 if( !WP_DEBUG ) {
 	add_filter('acf/settings/show_admin', '__return_false');
 }
+
+/* Inhalte "zufällig" über die REST API ausgeben */
+function add_rand_orderby_rest_post_collection_params( $query_params ) {
+	$query_params['orderby']['enum'][] = 'rand';
+	return $query_params;
+}
+add_filter( 'rest_js_bingo_statements_collection_params', 'add_rand_orderby_rest_post_collection_params' );
