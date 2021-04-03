@@ -1,7 +1,7 @@
 <?php
 /* Rest Calls definieren */
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'js/v1', '/savehighscore/(?P<player_name>[a-zA-Z0-9-]+)', array(
+  register_rest_route( 'js/v1', '/savehighscore/', array(
     'methods' => 'GET',
     'callback' => 'rest_save_highscore',
     'permission_callback' => '__return_true',
