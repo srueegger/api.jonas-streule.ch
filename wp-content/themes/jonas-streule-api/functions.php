@@ -119,3 +119,6 @@ function js_pre_get_posts( $query ) {
 	return $query;
 }
 add_action('pre_get_posts', 'js_pre_get_posts');
+
+/* Zusätzliche Rest Calls einbinden */
+require_once 'inc/rest-calls.php';
