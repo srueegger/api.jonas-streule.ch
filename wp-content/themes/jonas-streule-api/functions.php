@@ -103,3 +103,19 @@ function add_rand_orderby_rest_post_collection_params( $query_params ) {
 	return $query_params;
 }
 add_filter( 'rest_js_bingo_statements_collection_params', 'add_rand_orderby_rest_post_collection_params' );
+
+/* Highscore nach Punkte ausgeben */
+function js_pre_get_posts( $query ) {
+	// do not modify queries in the admin
+	if( is_admin() ) {
+		return $query;
+	}
+	if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'js_bingo_highscore' ) {
+		$query->set('orderby', 'meta_value_num');	
+		$query->set('meta_key', 'highscore_punkte');	 
+		$query->set('order', 'DESC'); 
+	}
+	// return
+	return $query;
+}
+add_action('pre_get_posts', 'js_pre_get_posts');
